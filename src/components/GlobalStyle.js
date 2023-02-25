@@ -20,8 +20,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* background-color: var(--primary-white-color);
-  color: var(--primary-text-color); */
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
