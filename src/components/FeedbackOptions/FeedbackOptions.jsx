@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { FeedbackOptionItem } from './FeedbackOptionItem/FeedbackOptionItem';
 
+import { StyledFeedbackOptions } from './FeedbackOptions.styled';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <ul>
+    <StyledFeedbackOptions>
       {options.map((option, idx) => (
         <FeedbackOptionItem
           key={idx}
@@ -11,7 +12,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           onLeaveFeedback={onLeaveFeedback}
         />
       ))}
-    </ul>
+    </StyledFeedbackOptions>
   );
 };
 

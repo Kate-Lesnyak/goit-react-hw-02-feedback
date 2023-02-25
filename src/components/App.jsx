@@ -1,11 +1,11 @@
 import { Component } from 'react';
 import { GlobalStyle } from './GlobalStyle';
-import { Layout } from './Layout/Layout';
 
-import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
-import { Statistics } from './Statistics/Statistics';
-import { Section } from './Section/Section';
-import { Notification } from './Notification/Notification';
+import { Section } from './Section';
+import { Layout } from './Layout';
+import { FeedbackOptions } from './FeedbackOptions';
+import { Statistics } from './Statistics';
+import { Notification } from './Notification';
 
 export class App extends Component {
   static defaultProps = {
@@ -18,9 +18,9 @@ export class App extends Component {
     bad: this.props.initialValue,
   };
 
-  leaveFeedback = key => {
+  leaveFeedback = option => {
     this.setState(prevState => ({
-      [key]: prevState[key] + 1,
+      [option]: prevState[option] + 1,
     }));
   };
 
@@ -38,8 +38,8 @@ export class App extends Component {
 
     return (
       <main>
+        <GlobalStyle />
         <Layout>
-          <GlobalStyle />
           <Section title="Please leave feedback">
             <FeedbackOptions
               options={Object.keys(this.state)}
