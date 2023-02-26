@@ -11,16 +11,18 @@ border: none;
 border-radius: 8px;
 text-transform: capitalize;
 cursor: pointer;
-background-color: #BFDC71;
+background-color: ${({ theme }) => theme.colors.buttonBackgroundColor};
 
 transition-property: background-color, color, transform;
 transform: scale(1);
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+transition: ${({ theme }) => `background-color ${theme.transition}, color ${theme.transition}, transform ${theme.transition}`};
+
 
 :hover, :focus {
-background-color: #236B0B;
-color: white;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+background-color: ${({ theme }) => theme.colors.buttonBackgroundColorAccent};
+color: ${({ theme }) => theme.colors.textColorAccent};
+box-shadow:${({ theme }) => theme.boxShadow};
 transform: scale(1.1);
 }
 `;

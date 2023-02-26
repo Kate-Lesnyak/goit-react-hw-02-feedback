@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledSection = styled.section`
 padding: 30px 0;
-background-color: #FCFADB;
+background-color: ${({ theme }) => theme.colors.backgroundColorSection};
 `;
 
 export const StyledTitle = styled.h2`
