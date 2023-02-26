@@ -13,10 +13,10 @@ text-transform: capitalize;
 cursor: pointer;
 background-color: ${({ theme }) => theme.colors.buttonBackgroundColor};
 
-transition-property: background-color, color, transform;
+transition-property: background-color, color,  box-shadow, transform;
 transform: scale(1);
 
-transition: ${({ theme }) => `background-color ${theme.transition}, color ${theme.transition}, transform ${theme.transition}`};
+transition: ${({ theme }) => `background-color ${theme.transition}, color ${theme.transition}, box-shadow ${theme.transition}, transform ${theme.transition}`};
 
 
 :hover, :focus {
